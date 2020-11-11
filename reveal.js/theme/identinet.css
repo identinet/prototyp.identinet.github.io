@@ -1,0 +1,396 @@
+/**
+ * identinet theme for reveal.js.
+ * Author: Jan Christoph Ebersbach
+ */
+@import url("identinet/fonts/Cormorant_Garamond/cormorant-garamond.css");
+@import url("identinet/fonts/Work_Sans/work-sans.css");
+@import url("identinet/fonts/Open_Sans/opensans.css");
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+:root {
+  --background-color: #FAFAFA;
+  --main-font: Open Sans, sans-serif;
+  --main-font-size: 40px;
+  --main-color: #424242;
+  --block-margin: 20px;
+  --heading-margin: 0 0 20px 0;
+  --heading-font: Work Sans, Cormorant Garamond, sans-serif;
+  --heading-color: #212121;
+  --heading-line-height: 1.2;
+  --heading-letter-spacing: normal;
+  --heading-text-transform: none;
+  --heading-text-shadow: none;
+  --heading-font-weight: normal;
+  --heading1-text-shadow: none;
+  --heading1-size: 2.3rem;
+  --heading2-size: 1.65rem;
+  --heading3-size: 1.55rem;
+  --heading4-size: 1.3rem;
+  --code-font: monospace;
+  --link-color: #EC407A;
+  --link-color-hover: #f59dbb;
+  --selection-background-color: #EC407A;
+  --selection-color: #fff; }
+
+.reveal-viewport {
+  background: #FAFAFA;
+  background-color: #FAFAFA; }
+
+.reveal {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  color: #424242; }
+
+.reveal ::selection {
+  color: #fff;
+  background: #EC407A;
+  text-shadow: none; }
+
+.reveal ::-moz-selection {
+  color: #fff;
+  background: #EC407A;
+  text-shadow: none; }
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #212121;
+  font-family: "Work Sans", "Cormorant Garamond", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 2.3rem; }
+
+.reveal h2 {
+  font-size: 1.65rem; }
+
+.reveal h3 {
+  font-size: 1.55rem; }
+
+.reveal h4 {
+  font-size: 1.3rem; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Remove trailing margins after titles */
+.reveal h1:last-child,
+.reveal h2:last-child,
+.reveal h3:last-child,
+.reveal h4:last-child,
+.reveal h5:last-child,
+.reveal h6:last-child {
+  margin-bottom: 0; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); }
+
+.reveal code {
+  font-family: monospace;
+  text-transform: none; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller; }
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+.reveal img {
+  margin: 20px 0; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #EC407A;
+  text-decoration: none;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #f59dbb;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #cb1452; }
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+  border: 4px solid #424242;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal a .r-frame {
+  transition: all .15s linear; }
+
+.reveal a:hover .r-frame {
+  border-color: #EC407A;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: #EC407A; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #EC407A; }
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: #FAFAFA; } }
+
+:root {
+  --darkPrimary1: #00345e;
+  --darkPrimary2: #004f91;
+  --lightPrimary1: #039BE5;
+  --lightPrimary2: #4FC3F7;
+  --lightPrimary3: #B3E5FC;
+  --lightSecondary1: #EC407A;
+  --lightSecondary2: #F48FB1;
+  --lightSecondary3: #FCE4EC;
+  --black: #212121;
+  --grey80: #424242;
+  --grey60: #757575;
+  --grey40: #BDBDBD;
+  --grey20: #EEEEEE;
+  --grey10: #F5F5F5;
+  --grey5: #FAFAFA;
+  --white: #FFFFFF; }
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.2; }
+
+.reveal #slide-number {
+  bottom: 0;
+  right: 2rem;
+  height: 3rem;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  color: inherit;
+  font-size: inherit;
+  font-family: "Work Sans", "Cormorant Garamond", sans-serif;
+  background: transparent; }
+
+html {
+  font-size: 40px; }
+
+li {
+  margin-top: 0.2rem; }
+
+#title-slide p.subtitle,
+#title-slide p.author,
+#title-slide p.date {
+  color: #757575; }
+
+#title-slide p.subtitle {
+  font-size: 1.55rem; }
+
+#slide-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center; }
+
+#slide-footer {
+  display: none;
+  justify-content: center;
+  align-items: center; }
+
+#slide-header, #slide-footer {
+  z-index: 99;
+  height: 2rem;
+  position: fixed;
+  width: 100%;
+  background-repeat: no-repeat; }
+
+#slide-header:before, #slide-header:after,
+#slide-footer:before, #slide-footer:after {
+  width: 100%;
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0px;
+  left: 0px;
+  height: 1px; }
+
+#slide-header:before {
+  bottom: 0px; }
+
+#slide-header:after {
+  bottom: -2px; }
+
+#slide-footer:before {
+  top: -3px; }
+
+#slide-footer:after {
+  top: -1px; }
+
+#slide-title {
+  color: #424242;
+  font-family: "Work Sans", "Cormorant Garamond", sans-serif;
+  font-size: 33.33333px; }
+
+#slide-logo {
+  margin-right: 2rem; }
+
+#slide-logo img {
+  height: 33.33333px; }
+
+#slide-header {
+  top: 0; }
+
+#slide-footer {
+  bottom: 0; }

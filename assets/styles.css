@@ -1,0 +1,214 @@
+:root {
+  --success: #1DE9B6;
+  --error: var(--lightSecondary2);
+  /* --testborder: #EEEEEE; */
+  /* --border: 2px solid var(--testborder); */
+
+  /* customer colors */
+  --sparkasse: #ed1c24;
+  --shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.1), 0 0px 6px 0 rgba(0, 0, 0, 0.05);
+}
+
+.c-success {
+  color: var(--success);
+}
+
+.c-error {
+  color: var(--error);
+}
+
+.c-primary {
+  color: var(--lightPrimary1);
+}
+
+.c-sparkasse {
+  color: var(--sparkasse) !important;
+}
+
+.box-4-2rem {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 5px;
+  /* box-shadow: var(--shadow); */
+  /* background-color: var(--background-color); */
+  /* color: var(--darkPrimary2); */
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.box-4-4rem {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5px;
+  /* box-shadow: var(--shadow); */
+  /* background-color: var(--background-color); */
+  /* color: var(--darkPrimary2); */
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.rect-column-1 {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  width: 1.6rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--background-color);
+  color: var(--darkPrimary2);
+  /* border: var(--border); */
+  padding: 0.15rem;
+}
+
+.box-column-1 {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--background-color);
+  color: var(--darkPrimary2);
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.box-column-1-5 {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--background-color);
+  color: var(--darkPrimary2);
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.box-column-4 {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--background-color);
+  color: var(--darkPrimary2);
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.box-column-4-2 {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--background-color);
+  color: var(--darkPrimary2);
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.box-column-6 {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--background-color);
+  color: var(--darkPrimary2);
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.box-column-8 {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  background-color: var(--background-color);
+  color: var(--darkPrimary2);
+  /* border: var(--border); */
+  padding: 0.5rem;
+}
+
+.div-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-row-around {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.div-row-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-column-around {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: around;
+}
+
+.list-style-no-bullet * li {
+  list-style: none;
+}
+
+.border-shadow {
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+}
