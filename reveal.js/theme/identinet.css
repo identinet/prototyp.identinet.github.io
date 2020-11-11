@@ -392,11 +392,15 @@ li {
   color: #424242;
   font-family: "Work Sans", sans-serif;
   font-size: var(--header-footer-font-size);
-  text-align: cente; }
+  text-align: center; }
 
 #slide-logo {
   display: flex;
-  margin: 0 0.5rem;
+  font-size: var(--header-footer-font-size);
+  margin: 0 1em; }
+
+#slide-logo img {
+  margin-top: -0.17em;
   height: var(--header-footer-font-size); }
 
 #slide-header {
