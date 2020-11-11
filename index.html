@@ -32,8 +32,8 @@ ul.task-list{list-style: none;}
 
 </head>
 <body>
-  <script src="reveal.js/reveal.js"></script>
-  <script src="https://kit.fontawesome.com/e450a6bd1a.js" crossorigin="anonymous"></script>
+    <script src="reveal.js/reveal.js"></script>
+    <script src="https://kit.fontawesome.com/e450a6bd1a.js" crossorigin="anonymous"></script>
 
 <div id="slide-header"></div>
 <div id="slide-footer">
@@ -43,22 +43,41 @@ ul.task-list{list-style: none;}
       alt="identinet logo"
     />
   </div>
-  <div id="slide-title"></div>
+  <p id="slide-title"></p>
   <script>
     // workaround for setting the title dynamically in a statically included file
     document.getElementById("slide-title").innerText = document.title;
-    Reveal.on( 'slidechanged', event => {
-        let display = 'flex';
-        // console.log('event', event);
-        // console.log('className', event.currentSlide.className.split(' ').indexOf('no-footer'));
+    Reveal.on("slidechanged", (event) => {
+      let visibility = "visible";
+      // console.log("event", event);
+      // console.log('className', event.currentSlide.className.split(' ').indexOf('no-footer'));
 
-        if (event.indexh === 0 && event.indexv === 0) {
-            // console.log('hide');
-            display = 'none';
-        } else if (event.currentSlide.className.split(' ').indexOf('no-footer') !== -1){
-            display = 'none';
-        }
-        document.getElementById("slide-footer").style.display = display;
+      if (event.indexh === 0 && event.indexv === 0) {
+        // console.log('hide');
+        visibility = "hidden";
+      } else if (
+        event.currentSlide.className.split(" ").indexOf("no-footer") !== -1
+      ) {
+        visibility = "hidden";
+      }
+      document
+        .getElementById("slide-footer")
+        .style.setProperty("visibility", visibility);
+
+      let scale = 1.0;
+      try {
+        scale = Reveal.getScale();
+      } finally {
+        const mainFontSize = Number.parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            "--main-font-size"
+          )
+        );
+        document.documentElement.style.setProperty(
+          "--header-footer-font-size",
+          `${(mainFontSize * scale) / 1.5}px`
+        );
+      }
     });
   </script>
 </div>
@@ -131,12 +150,10 @@ Enterprises
 <div class="flex justify-center align-center">
 <a href="https://demo.identinet.io/">
 <div class="box-column-6 margin-tb-0-5rem justify-self-center align-self-center">
-<div class="flex align-center">
 <div class="c-primary margin-lr-0-1rem fs-1-5">
 <i class='fad fa-flask'></i>
 </div>
-</div>
-demo.identinet.io
+Starte Demo<br />demo.identinet.io
 </div>
 <p></a></p>
 </div>

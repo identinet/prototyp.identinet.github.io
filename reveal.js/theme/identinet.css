@@ -2,7 +2,6 @@
  * identinet theme for reveal.js.
  * Author: Jan Christoph Ebersbach
  */
-@import url("identinet/fonts/Cormorant_Garamond/cormorant-garamond.css");
 @import url("identinet/fonts/Work_Sans/work-sans.css");
 @import url("identinet/fonts/Open_Sans/opensans.css");
 /*********************************************
@@ -15,7 +14,7 @@
   --main-color: #424242;
   --block-margin: 20px;
   --heading-margin: 0 0 20px 0;
-  --heading-font: Work Sans, Cormorant Garamond, sans-serif;
+  --heading-font: Work Sans, sans-serif;
   --heading-color: #212121;
   --heading-line-height: 1.2;
   --heading-letter-spacing: normal;
@@ -28,8 +27,8 @@
   --heading3-size: 1.55rem;
   --heading4-size: 1.3rem;
   --code-font: monospace;
-  --link-color: #EC407A;
-  --link-color-hover: #f59dbb;
+  --link-color: #004f91;
+  --link-color-hover: #039BE5;
   --selection-background-color: #EC407A;
   --selection-color: #fff; }
 
@@ -69,7 +68,7 @@
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #212121;
-  font-family: "Work Sans", "Cormorant Garamond", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -244,18 +243,18 @@
  * LINKS
  *********************************************/
 .reveal a {
-  color: #EC407A;
+  color: #004f91;
   text-decoration: none;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #f59dbb;
+  color: #039BE5;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #cb1452; }
+  background: #002545; }
 
 /*********************************************
  * Frame helper
@@ -268,21 +267,21 @@
   transition: all .15s linear; }
 
 .reveal a:hover .r-frame {
-  border-color: #EC407A;
+  border-color: #004f91;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #EC407A; }
+  color: #004f91; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #EC407A; }
+  color: #004f91; }
 
 /*********************************************
  * PRINT BACKGROUND
@@ -290,6 +289,12 @@
 @media print {
   .backgrounds {
     background-color: #FAFAFA; } }
+
+.reveal a {
+  text-decoration: underline; }
+
+.reveal a:hover {
+  text-decoration: none; }
 
 :root {
   --darkPrimary1: #00345e;
@@ -307,7 +312,8 @@
   --grey20: #EEEEEE;
   --grey10: #F5F5F5;
   --grey5: #FAFAFA;
-  --white: #FFFFFF; }
+  --white: #FFFFFF;
+  --header-footer-font-size: 40px; }
 
 .reveal .slides section,
 .reveal .slides section > section {
@@ -322,7 +328,7 @@
   justify-content: center;
   color: inherit;
   font-size: inherit;
-  font-family: "Work Sans", "Cormorant Garamond", sans-serif;
+  font-family: "Work Sans", sans-serif;
   background: transparent; }
 
 html {
@@ -340,14 +346,17 @@ li {
   font-size: 1.55rem; }
 
 #slide-header {
-  display: none;
+  display: flex;
+  visibility: hidden;
   justify-content: space-between;
   align-items: center; }
 
 #slide-footer {
-  display: none;
+  visibility: hidden;
+  display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-wrap: wrap; }
 
 #slide-header, #slide-footer {
   z-index: 99;
@@ -379,15 +388,16 @@ li {
   top: -1px; }
 
 #slide-title {
+  display: flex;
   color: #424242;
-  font-family: "Work Sans", "Cormorant Garamond", sans-serif;
-  font-size: 33.33333px; }
+  font-family: "Work Sans", sans-serif;
+  font-size: var(--header-footer-font-size);
+  text-align: cente; }
 
 #slide-logo {
-  margin-right: 2rem; }
-
-#slide-logo img {
-  height: 33.33333px; }
+  display: flex;
+  margin: 0 0.5rem;
+  height: var(--header-footer-font-size); }
 
 #slide-header {
   top: 0; }
