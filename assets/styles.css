@@ -204,8 +204,9 @@
   justify-content: around;
 }
 
-.list-style-no-bullet * li {
-  list-style: none;
+.list-style-no-bullet,
+.list-style-no-bullet * ul {
+  list-style: none !important;
 }
 
 .border-shadow {
